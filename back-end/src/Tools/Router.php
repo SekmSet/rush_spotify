@@ -3,6 +3,7 @@
 namespace App\Tools;
 
 use App\Controller\AlbumController;
+use App\Controller\GenresController;
 use App\Controller\HomeController;
 use App\Controller\ArtistsController;
 use App\Controller\SearchController;
@@ -56,6 +57,17 @@ class Router
 
             case '/tracks':
                 $controller = new TracksController();
+                $id = $_GET['id'] ?? null;
+
+                if ($id){
+                    $controller->get($id);
+                }else{
+                    $controller->list();
+                }
+                break;
+
+            case '/genres':
+                $controller = new GenresController();
                 $id = $_GET['id'] ?? null;
 
                 if ($id){

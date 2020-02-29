@@ -6,6 +6,7 @@ use App\Controller\AlbumController;
 use App\Controller\HomeController;
 use App\Controller\ArtistsController;
 use App\Controller\SearchController;
+use App\Controller\TracksController;
 
 class Router
 {
@@ -44,6 +45,17 @@ class Router
 
             case '/albums':
                 $controller = new AlbumController();
+                $id = $_GET['id'] ?? null;
+
+                if ($id){
+                    $controller->get($id);
+                }else{
+                    $controller->list();
+                }
+                break;
+
+            case '/tracks':
+                $controller = new TracksController();
                 $id = $_GET['id'] ?? null;
 
                 if ($id){

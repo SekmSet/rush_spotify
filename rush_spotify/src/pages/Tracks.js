@@ -1,11 +1,26 @@
-import React, {PureComponent} from "react";
+import React, { PureComponent } from 'react';
+import Track from '../components/track';
 
 class Tracks extends PureComponent {
+
+    state = {
+        tracks: []
+    };
+
+    componentDidMount() {
+        fetch('http://localhost:8081/tracks')
+            .then(res => res.json())
+            .then((data) => {
+                this.setState({ tracks: data });
+                console.log(data);
+            })
+            .catch(console.log)
+    }
+
     render () {
         return (
-            <div>
-                Voici une div pour les tracks
-            </div>
+            <Track tracks={this.state.tracks} />
+
         );
     }
 }

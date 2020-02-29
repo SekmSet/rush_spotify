@@ -1,7 +1,27 @@
-import React from "react";
+import React, { PureComponent } from 'react';
+import Artist from '../components/artist';
 
-function Artists() {
-    return <h2>Page des artistes</h2>;
+class Artists extends PureComponent {
+
+    state = {
+        artists: []
+    };
+
+    componentDidMount() {
+        fetch('http://localhost:8081/artists')
+            .then(res => res.json())
+            .then((data) => {
+                this.setState({ artists: data });
+                console.log(data);
+            })
+            .catch(console.log)
+    }
+
+    render () {
+        return (
+            <Artist artists={this.state.artists} />
+
+        );
+    }
 }
-
 export default Artists;

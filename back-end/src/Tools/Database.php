@@ -12,11 +12,11 @@ class Database
     public function __construct() {
         $eloquentManager = new Manager;
         $eloquentManager->addConnection([
-            "driver" => "mysql",
-            "host" =>"127.0.0.1",
-            "database" => "spotify",
-            "username" => "root",
-            "password" => "root"
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'database' => 'spotify',
+            'username' => 'root',
+            'password' => 'root'
         ]);
         $eloquentManager->setAsGlobal();
         $eloquentManager->bootEloquent();

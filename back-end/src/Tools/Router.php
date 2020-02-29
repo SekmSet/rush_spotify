@@ -2,9 +2,8 @@
 
 namespace App\Tools;
 
-use App\Controller\Home;
-use App\Controller\Search;
-use App\Controller\User;
+use App\Controller\HomeController;
+use App\Controller\ArtistsController;
 
 class Router
 {
@@ -13,6 +12,7 @@ class Router
 
     /**
      * Router constructor.
+     * @param string $uri
      */
     public function __construct(string $uri)
     {
@@ -26,8 +26,18 @@ class Router
 
         switch($uri2) {
             case '/' :
-                $controller = new Home();
+                $controller = new HomeController();
                 $controller->index();
+                break;
+
+            case '/artists':
+                $controller = new ArtistsController();
+                $id = $_GET['id'] ?? null;
+                if ($id){
+                    $controller->get($id);
+                }else{
+                    $controller->list();
+                }
                 break;
 
             default:

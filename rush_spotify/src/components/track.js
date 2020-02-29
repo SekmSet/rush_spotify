@@ -9,7 +9,9 @@ const Track = ({ tracks }) => {
                     <div className="card-body">
                         <h5 className="card-title">{track.name}</h5>
                         <h6 className="card-subtitle mb-2 text-muted">{track.duration}</h6>
-                        <p className="card-text"><a href={track.mp3} target='_blank'>LINK</a></p>
+                        <p className="card-text">
+                            <a href={track.mp3} target='_blank' rel="noopener noreferrer">LINK</a>
+                        </p>
                     </div>
                 </div>
             ))}

@@ -2,6 +2,7 @@
 
 namespace App\Tools;
 
+use App\Controller\AlbumController;
 use App\Controller\HomeController;
 use App\Controller\ArtistsController;
 
@@ -33,6 +34,17 @@ class Router
             case '/artists':
                 $controller = new ArtistsController();
                 $id = $_GET['id'] ?? null;
+                if ($id){
+                    $controller->get($id);
+                }else{
+                    $controller->list();
+                }
+                break;
+
+            case '/albums':
+                $controller = new AlbumController();
+                $id = $_GET['id'] ?? null;
+
                 if ($id){
                     $controller->get($id);
                 }else{

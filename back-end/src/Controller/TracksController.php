@@ -10,7 +10,7 @@ class TracksController extends BaseController
 {
     public function list ()
     {
-        $tracks = Tracks::with('album')->get();
+        $tracks = Tracks::with('album')->limit(10)->get();
         echo $tracks->toJson();
     }
 

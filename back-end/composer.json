@@ -6,8 +6,9 @@
             "email": "priscilla.joly@epitech.eu"
         }
     ],
-    "require": {},
-
+    "require": {
+        "illuminate/database": "^6.17"
+    },
     "autoload": {
         "psr-4": {
             "App\\": "src"

@@ -36,7 +36,7 @@ class SearchController extends BaseController
                 $query->where('name', 'like', "%$genre%");
             });
         }
-
+        
         echo $results->get()->toJson();
     }
 }

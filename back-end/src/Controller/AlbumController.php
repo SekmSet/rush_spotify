@@ -17,6 +17,9 @@ class AlbumController extends BaseController
     public function get($id)
     {
         $album = Albums::with('artist', 'genres', 'tracks')->find($id);
+
+        $this->checkErrorId($album);
+
         echo $album->toJson();
     }
 }

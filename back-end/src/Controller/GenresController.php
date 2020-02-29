@@ -18,6 +18,8 @@ class GenresController extends BaseController
     {
         $genre = Genres::with('albums')->find($id);
 
+        $this->checkErrorId($genre);
+
         echo $genre->toJson();
     }
 }

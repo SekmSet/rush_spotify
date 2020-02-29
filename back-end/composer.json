@@ -1,0 +1,16 @@
+{
+    "name": "priscillajoly/back-end",
+    "authors": [
+        {
+            "name": "Priscilla Joly",
+            "email": "priscilla.joly@epitech.eu"
+        }
+    ],
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    }
+}

@@ -18,6 +18,9 @@ class TracksController extends BaseController
     {
         $track = Tracks::with('album')->find($id);
 
+        $this->checkErrorId($track);
+
+
         echo $track->toJson();
     }
 }

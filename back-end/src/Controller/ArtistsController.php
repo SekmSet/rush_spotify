@@ -18,6 +18,8 @@ class ArtistsController extends BaseController
     {
         $artists = Artists::with('albums')->find($id);
 
+        $this->checkErrorId($artists);
+
         echo $artists->toJson();
     }
 }

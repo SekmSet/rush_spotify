@@ -16,7 +16,7 @@ class Database
             'host' => 'localhost',
             'database' => 'spotify',
             'username' => 'root',
-            'password' => 'root'
+            'password' => 'Obrigada'
         ]);
         $eloquentManager->setAsGlobal();
         $eloquentManager->bootEloquent();

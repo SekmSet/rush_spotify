@@ -5,6 +5,7 @@ namespace App\Tools;
 use App\Controller\AlbumController;
 use App\Controller\HomeController;
 use App\Controller\ArtistsController;
+use App\Controller\SearchController;
 
 class Router
 {
@@ -50,6 +51,11 @@ class Router
                 }else{
                     $controller->list();
                 }
+                break;
+
+            case '/search':
+                $controller = new SearchController();
+                $controller->search_elements();
                 break;
 
             default:

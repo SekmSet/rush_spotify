@@ -10,13 +10,14 @@ class ArtistsController extends BaseController
 {
     public function list ()
     {
-        $artists = Artists::all();
+        $artists = Artists::with('albums')->get();
         echo $artists->toJson();
     }
 
     public function get($id)
     {
-        $artists = Artists::find($id);
+        $artists = Artists::with('albums')->find($id);
+
         echo $artists->toJson();
     }
 }

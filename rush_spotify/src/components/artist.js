@@ -1,5 +1,7 @@
 import React from 'react'
-
+import {
+    Link
+} from "react-router-dom";
 const Artist = ({ artists }) => {
     return (
         <div>
@@ -7,10 +9,9 @@ const Artist = ({ artists }) => {
             {artists.map((artist) => (
                 <div key={artist.id} className="card">
                     <div className="card-body">
-                        <h5 className="card-title">{artist.name}</h5>
-                        <h6 className="card-subtitle mb-2 text-muted">{artist.description}</h6>
-                        <p className="card-text">{artist.bio}</p>
-                        <p className="card-text"><a href={artist.photo} target='_blank'>LINK</a></p>
+                        <h5 className="card-title">
+                            <Link to={`/artists/${artist.id}`}>{artist.name}</Link>
+                        </h5>
 
                     </div>
                 </div>

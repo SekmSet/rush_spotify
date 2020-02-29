@@ -6,11 +6,12 @@ import {
   Link
 } from "react-router-dom";
 
-import logo from './logo.svg';
 import './App.css';
-import About from "./pages/About";
 import Home from "./pages/Home";
-import Users from "./pages/Users";
+import Albums from "./pages/Albums";
+import Genres from "./pages/Genres";
+import Artists from "./pages/Artists";
+import Tracks from "./pages/Tracks";
 
 function App() {
   return (
@@ -22,20 +23,32 @@ function App() {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/albums">Album</Link>
               </li>
               <li>
-                <Link to="/users">Users</Link>
+                <Link to="/genres">Genre</Link>
+              </li>
+              <li>
+                <Link to="/artists">Artists</Link>
+              </li>
+              <li>
+                <Link to="/tracks">Tracks</Link>
               </li>
             </ul>
           </nav>
 
           <Switch>
-            <Route path="/about">
-              <About />
+            <Route path="/albums">
+              <Albums />
             </Route>
-            <Route path="/users">
-              <Users />
+            <Route path="/genres">
+              <Genres />
+            </Route>
+            <Route path="/artists">
+              <Artists />
+            </Route>
+            <Route path="/tracks">
+              <Tracks />
             </Route>
             <Route path="/">
               <Home />

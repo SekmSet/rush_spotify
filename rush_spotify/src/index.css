@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.pagination {
+  margin: 10px;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 3px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.pagination li.active {
+  background-color: white;
+  border-radius: 5px;
+}

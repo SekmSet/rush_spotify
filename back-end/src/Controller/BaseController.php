@@ -2,10 +2,18 @@
 
 namespace App\Controller;
 
-use App\Tools\Database;
-
 class BaseController
 {
-
-
+    /**
+     * @param $list
+     */
+    protected function checkErrorId($list)
+    {
+        if ($list === null) {
+            echo json_encode([
+                'error' => 'no valid id'
+            ]);
+            die;
+        }
+    }
 }

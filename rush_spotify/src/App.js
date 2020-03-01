@@ -3,45 +3,57 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
-import logo from './logo.svg';
 import './App.css';
-import About from "./pages/About";
-import Home from "./pages/Home";
-import Users from "./pages/Users";
+import Header from "./components/header";
+import Footer from "./components/footer";
+import Homes from "./pages/Homes";
+import Albums from "./pages/Albums";
+import Genres from "./pages/Genres";
+import Artists from "./pages/Artists";
+import Tracks from "./pages/Tracks";
+import Searchs from "./pages/Searchs";
+import ArtistDetails from "./pages/ArtistDetails";
+import AlbumDetails from "./pages/AlbumDetails";
+import GenreDetails from "./pages/GenreDetails";
 
 function App() {
   return (
       <Router>
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/users">Users</Link>
-              </li>
-            </ul>
-          </nav>
-
+        <Header />
+        <div className="container">   
           <Switch>
-            <Route path="/about">
-              <About />
+            <Route path="/albums/:id">
+              <AlbumDetails />
             </Route>
-            <Route path="/users">
-              <Users />
+            <Route path="/albums">
+              <Albums />
             </Route>
-            <Route path="/">
-              <Home />
+            <Route path="/genres/:id">
+              <GenreDetails />
+            </Route>
+            <Route path="/genres">
+              <Genres />
+            </Route>
+            <Route path="/artists/:id">
+              <ArtistDetails />
+            </Route>
+            <Route path="/artists">
+              <Artists />
+            </Route>
+            <Route path="/tracks">
+              <Tracks />
+            </Route>
+            <Route path="/search">
+              <Searchs />
+            </Route>
+            <Route exact path="/">
+              <Homes />
             </Route>
           </Switch>
         </div>
+        <Footer />
       </Router>
   );
 }

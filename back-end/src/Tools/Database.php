@@ -1,25 +1,24 @@
 <?php
-
+/**
+ * https://medium.com/@kshitij206/use-eloquent-without-laravel-7e1c73d79977
+ */
 namespace App\Tools;
 
-use PDO;
-use PDOException;
+use Illuminate\Database\Capsule\Manager;
+
 
 class Database
 {
-    private $user = 'root';
-    private $pwd = 'Obrigada';
-    private $dsn = 'mysql:dbname=my_meetic;host=localhost';
-
-    private $connexion_sql;
-
-    public function connect_to_sql() {
-        try {
-            $this->connexion_sql = new PDO($this->dsn, $this->user, $this->pwd);
-            return $this->connexion_sql;
-        } catch (PDOException $e) {
-            echo 'Connection failed: ' . $e->getMessage();
-            die();
-        }
+    public function __construct() {
+        $eloquentManager = new Manager;
+        $eloquentManager->addConnection([
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'database' => 'spotify',
+            'username' => 'root',
+            'password' => 'root'
+        ]);
+        $eloquentManager->setAsGlobal();
+        $eloquentManager->bootEloquent();
     }
 }

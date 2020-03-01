@@ -37,6 +37,6 @@ class SearchController extends BaseController
             });
         }
         
-        echo $results->get()->toJson();
+        echo $results->paginate(50)->toJson();
     }
 }

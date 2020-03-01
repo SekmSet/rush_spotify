@@ -1,7 +1,8 @@
 import React from 'react'
+
 import {
     Link
-} from "react-router-dom";
+} from "react-router-dom"
 const Album = ({ albums }) => {
     return (
         <div>
@@ -15,6 +16,8 @@ const Album = ({ albums }) => {
                     </div>
                 </div>
             ))}
+
+
         </div>
     )
 };

@@ -34,6 +34,11 @@ class Router
                 $controller->index();
                 break;
 
+            case '/albums/random' :
+                $controller = new HomeController();
+                $controller->random();
+                break;
+
             case '/artists':
                 $controller = new ArtistsController();
                 $id = $_GET['id'] ?? null;

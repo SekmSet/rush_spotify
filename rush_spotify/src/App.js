@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 
 import './App.css';
+import Header from "./components/header";
+import Footer from "./components/footer";
 import Homes from "./pages/Homes";
 import Albums from "./pages/Albums";
 import Genres from "./pages/Genres";
@@ -20,30 +22,8 @@ import GenreDetails from "./pages/GenreDetails";
 function App() {
   return (
       <Router>
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/albums">Album</Link>
-              </li>
-              <li>
-                <Link to="/genres">Genre</Link>
-              </li>
-              <li>
-                <Link to="/artists">Artists</Link>
-              </li>
-              <li>
-                <Link to="/tracks">Tracks</Link>
-              </li>
-              <li>
-                <Link to="/search">Search</Link>
-              </li>
-            </ul>
-          </nav>
-
+        <Header />
+        <div className="container">   
           <Switch>
             <Route path="/albums/:id">
               <AlbumDetails />
@@ -74,6 +54,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <Footer />
       </Router>
   );
 }

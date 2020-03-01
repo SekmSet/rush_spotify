@@ -6,7 +6,7 @@ import {
 const GenreDetail = ({ genre }) => {
     return (
         <div>
-            <h1>Genre List</h1>
+            <center><h1>Genre List</h1></center>
                 <div className="card">
                     <div className="card-body">
                         <h5 className="card-title">{genre.name}</h5>

@@ -26,7 +26,6 @@ class GenreDetails extends PureComponent {
     render () {
         return (
             <GenreDetail genre={this.state.genre} />
-
         );
     }
 }

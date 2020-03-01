@@ -46,10 +46,7 @@ class Tracks extends PureComponent {
                     totalItemsCount={this.state.total}
                     onChange={this.handlePageChange.bind(this)}
                 />
-
             </div>
-
-
         );
     }
 }

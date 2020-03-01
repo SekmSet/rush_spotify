@@ -6,7 +6,7 @@ import {
 const Genre = ({ genres }) => {
     return (
         <div>
-        <center><h1>Genres list</h1></center>
+        <h1 className="text-center">Genres list</h1>
         {genres.map((genre) => (
             <div key={genre.id} className="card">
                 <div className="card-body">

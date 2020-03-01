@@ -3,7 +3,7 @@ import React from 'react'
 const Track = ({ tracks }) => {
     return (
         <div>
-            <center><h1>Track List</h1></center>
+            <h1 className="text-center">Track List</h1>
             {tracks.map((track) => (
                 <div key={track.id} className="card">
                     <div className="card-body">

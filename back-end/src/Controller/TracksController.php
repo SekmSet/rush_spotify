@@ -10,7 +10,7 @@ class TracksController extends BaseController
 {
     public function list ()
     {
-        $tracks = Tracks::with('album')->limit(10)->get();
+        $tracks = Tracks::with('album')->paginate(50);
         echo $tracks->toJson();
     }
 

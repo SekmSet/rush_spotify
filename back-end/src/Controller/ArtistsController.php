@@ -10,7 +10,7 @@ class ArtistsController extends BaseController
 {
     public function list ()
     {
-        $artists = Artists::with('albums')->get();
+        $artists = Artists::with('albums')->paginate(50);
         echo $artists->toJson();
     }
 

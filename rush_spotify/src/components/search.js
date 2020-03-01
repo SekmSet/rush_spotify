@@ -1,12 +1,9 @@
 import React from 'react'
-import {
-    Link
-} from "react-router-dom";
 
 const Search = ({ search }) => {
     return (
             <div>
-                <h1>Page de recherche</h1>
+                <h1 className="text-center">Page de recherche</h1>
                 {search.map((track) => (
                     <div key={track.id} className="card">
                         <div className="card-body">

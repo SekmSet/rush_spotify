@@ -49,8 +49,6 @@ class Artists extends PureComponent {
                 />
 
             </div>
-
-
         );
     }
 }

@@ -17,6 +17,20 @@ body {
   }
 }
 
+label {
+  margin : 9px 0;
+}
+
+input{
+  margin :0 35px;
+
+}
+
+#button{
+  border-radius: 3px;
+
+}
+
 footer{
   background-color: #343a40!important;
   color: white!important;

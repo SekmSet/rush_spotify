@@ -6,7 +6,7 @@ import {
 const Home = ({ randomAlbums }) => {
     return (
         <div>
-        <center><h1>Home</h1></center>
+        <h1 className="text-center">Home</h1>
         {randomAlbums.map((album) => (
             <div key={album.id} className="card">
                 <div className="card-body">

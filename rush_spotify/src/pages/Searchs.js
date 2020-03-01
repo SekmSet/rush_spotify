@@ -75,27 +75,27 @@ class Searchs extends PureComponent{
             <div>
                 <form onSubmit={this.handleSubmit}>
 
-                    <label>
+                    <label htmlFor="name">
                         Recherche par name
-                        <input type="text"  value={this.state.name} onChange={this.handleChangeName} />
+                        <input type="text"  id="name" value={this.state.name} onChange={this.handleChangeName} />
                     </label>
-
-                    <label>
+                    <br/>
+                    <label htmlFor="album">
                         Recherche par album
-                        <input type="text"  value={this.state.album} onChange={this.handleChangeAlbum}/>
+                        <input type="text"  id="album" value={this.state.album} onChange={this.handleChangeAlbum}/>
                     </label>
-
-                    <label>
+                    <br/>
+                    <label htmlFor="genre">
                         Recherche par genre
-                        <input type="text" value={this.state.genre} onChange={this.handleChangeGenre}/>
+                        <input type="text"  id="genre" value={this.state.genre} onChange={this.handleChangeGenre}/>
                     </label>
-
-                    <label>
+                    <br/>
+                    <label htmlFor="artist">
                         Recherche par artiste
-                        <input type="text" value={this.state.artist} onChange={this.handleChangeArtist}/>
+                        <input type="text"  id="artist" value={this.state.artist} onChange={this.handleChangeArtist}/>
                     </label>
-
-                    <input type="submit" value="Envoyer" />
+                    <br/>
+                    <input type="submit" id="button" value="Envoyer" />
                 </form>
                 <Search search={this.state.tracks} />
 

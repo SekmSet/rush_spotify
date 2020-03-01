@@ -1,17 +1,17 @@
 import React from 'react'
-
-const Album = ({ Albums }) => {
+import {
+    Link
+} from "react-router-dom";
+const Album = ({ albums }) => {
     return (
         <div>
-            <h1 className = "text-center">Album List</h1>
-            {Albums.map((Album) => (
+            <h1>Albums List</h1>
+            {albums.map((Album) => (
                 <div key={Album.id} className="card">
                     <div className="card-body">
-                        <h5 className="card-title">{Album.name}</h5>
-                        <p className="card-text">{Album.description}</p>
-                        <p className="card-text">{Album.release_year_date}</p>
-                        <p className="card-text">{Album.popularity}</p>
-                        <img src={Album.cover} alt="Cover" />
+                        <h5 className="card-title">
+                            <Link to={`/albums/${Album.id}`}>{Album.name}</Link>
+                        </h5>
                     </div>
                 </div>
             ))}

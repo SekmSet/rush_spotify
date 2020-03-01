@@ -11,7 +11,7 @@ class Tracks extends PureComponent {
         fetch('http://localhost:8081/tracks')
             .then(res => res.json())
             .then((data) => {
-                this.setState({ tracks: data });
+                this.setState({ tracks: data.data });
                 console.log(data);
             })
             .catch(console.log)

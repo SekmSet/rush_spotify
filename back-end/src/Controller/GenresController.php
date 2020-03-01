@@ -10,7 +10,7 @@ class GenresController extends BaseController
 {
     public function list ()
     {
-        $genres = Genres::with('albums')->get();
+        $genres = Genres::with('albums')->paginate(50);
         echo $genres->toJson();
     }
 

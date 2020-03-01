@@ -11,7 +11,7 @@ class Genres extends PureComponent{
         fetch('http://localhost:8081/genres')
         .then(res => res.json())
         .then((data) => {
-            this.setState({ genres: data })
+            this.setState({ genres: data.data })
         })
         .catch(console.log)
     }

@@ -12,6 +12,7 @@ import Albums from "./pages/Albums";
 import Genres from "./pages/Genres";
 import Artists from "./pages/Artists";
 import Tracks from "./pages/Tracks";
+import Searchs from "./pages/Searchs";
 import ArtistDetails from "./pages/ArtistDetails";
 import AlbumDetails from "./pages/AlbumDetails";
 import GenreDetails from "./pages/GenreDetails";
@@ -37,6 +38,9 @@ function App() {
               <li>
                 <Link to="/tracks">Tracks</Link>
               </li>
+              <li>
+                <Link to="/search">Search</Link>
+              </li>
             </ul>
           </nav>
 
@@ -61,6 +65,9 @@ function App() {
             </Route>
             <Route path="/tracks">
               <Tracks />
+            </Route>
+            <Route path="/search">
+              <Searchs />
             </Route>
             <Route exact path="/">
               <Homes />

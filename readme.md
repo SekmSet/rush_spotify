@@ -1,18 +1,25 @@
 #Rush Spotify 
 
-## Installer comoser
+## Installer composer
 
 ```composer init```
 
 ```composer instal```
 
-## Connexion à la BD 
+## Connexion à la BDD
 
 ### Lancer le serveur PHP
 
 ```bash
 php -S localhost:8081 -t public
 ```
+
+### Lancer React
+
+```bash
+npm start
+```
+
 
 ### Quitter le serveur
 

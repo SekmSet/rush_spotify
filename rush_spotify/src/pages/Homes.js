@@ -8,10 +8,10 @@ class Homes extends PureComponent{
     };
 
     componentDidMount() {
-        fetch('http://localhost:8081/albums')
+        fetch('http://localhost:8081/albums/random')
         .then(res => res.json())
         .then((data) => {
-            this.setState({ randomAlbums: data.data })
+            this.setState({ randomAlbums: data })
         })
         .catch(console.log)
     }

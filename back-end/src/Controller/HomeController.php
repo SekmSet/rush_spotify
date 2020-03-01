@@ -2,7 +2,7 @@
 
 
 namespace App\Controller;
-
+use App\Model\Albums;
 
 class HomeController extends BaseController
 {
@@ -10,6 +10,11 @@ class HomeController extends BaseController
         echo json_encode([
             'api_version' => 1
         ]);
+    }
+
+    function random(){
+        $randomAlbums = Albums::all()->random(10);
+        echo $randomAlbums->toJson();
     }
 
 }

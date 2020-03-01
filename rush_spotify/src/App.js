@@ -14,6 +14,7 @@ import Artists from "./pages/Artists";
 import Tracks from "./pages/Tracks";
 import ArtistDetails from "./pages/ArtistDetails";
 import AlbumDetails from "./pages/AlbumDetails";
+import GenreDetails from "./pages/GenreDetails";
 
 function App() {
   return (
@@ -45,6 +46,9 @@ function App() {
             </Route>
             <Route path="/albums">
               <Albums />
+            </Route>
+            <Route path="/genres/:id">
+              <GenreDetails />
             </Route>
             <Route path="/genres">
               <Genres />

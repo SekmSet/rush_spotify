@@ -1,7 +1,26 @@
-import React from "react";
+import React, { PureComponent } from 'react';
+import Genre from '../components/genre';
 
-function Genres() {
-    return <h2>Page des Genres</h2>;
+class Genres extends PureComponent{
+
+    state = {
+        genres: []
+    };
+
+    componentDidMount() {
+        fetch('http://localhost:8081/genres')
+        .then(res => res.json())
+        .then((data) => {
+            this.setState({ genres: data })
+        })
+        .catch(console.log)
+    }
+
+    render() {
+        return (
+          <Genre genres={this.state.genres} />
+        )
+    }
 }
 
 export default Genres;

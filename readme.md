@@ -1,28 +1,51 @@
 #Rush Spotify 
 
-## Installer composer
+## Config connect to DB
 
-```composer init```
+```bash
+    Update password in src > Tools > Databse
+```
 
-```composer instal```
+## Install composer
 
-## Connexion à la BDD
+```bash
+composer init
+composer install
+```
 
-### Lancer le serveur PHP
+### Start server PHP
 
 ```bash
 php -S localhost:8081 -t public
 ```
 
-### Lancer React
+### Start React
 
 ```bash
+npm install
 npm start
 ```
 
-
-### Quitter le serveur
+### Quit server
 
 ```bash
 CTRL C
 ```
+
+### Dependencies PHP
+
+* illuminate/database -> eloquent
+* illuminate/pagination
+
+### Dependencies JS
+
+* React
+* react-js-pagination
+* react-router-dom
+
+
+### Links
+
+* https://laravel.com/docs/5.8/eloquent
+* https://medium.com/@kshitij206/use-eloquent-without-laravel-7e1c73d79977
+* https://stackoverflow.com/questions/34179401/paginating-eloquent-4-2-models-outside-of-laravel

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const AlbumDetail = ({ album }) => {
     return (
         <div>
-            <h1>Albums List</h1>
+            <center><h1>Albums List</h1></center>
             <div className="card">
                 <div className="card-body">
                     <h5 className="card-title">{album.name}</h5>

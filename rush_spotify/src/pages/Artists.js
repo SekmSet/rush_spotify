@@ -11,7 +11,7 @@ class Artists extends PureComponent {
         fetch('http://localhost:8081/artists')
             .then(res => res.json())
             .then((data) => {
-                this.setState({ artists: data });
+                this.setState({ artists: data.data });
                 console.log(data);
             })
             .catch(console.log)

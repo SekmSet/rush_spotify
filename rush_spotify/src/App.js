@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import './App.css';
-import Home from "./pages/Home";
+import Homes from "./pages/Homes";
 import Albums from "./pages/Albums";
 import Genres from "./pages/Genres";
 import Artists from "./pages/Artists";
@@ -63,7 +63,7 @@ function App() {
               <Tracks />
             </Route>
             <Route exact path="/">
-              <Home />
+              <Homes />
             </Route>
           </Switch>
         </div>

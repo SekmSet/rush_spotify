@@ -10,7 +10,7 @@ class AlbumController extends BaseController
 {
     public function list ()
     {
-        $albums = Albums::with('artist', 'genres', 'tracks')->get();
+        $albums = Albums::with('artist', 'genres', 'tracks')->paginate(50);
         echo $albums->toJson();
     }
 

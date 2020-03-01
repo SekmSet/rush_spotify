@@ -49,3 +49,4 @@ CTRL C
 * https://laravel.com/docs/5.8/eloquent
 * https://medium.com/@kshitij206/use-eloquent-without-laravel-7e1c73d79977
 * https://stackoverflow.com/questions/34179401/paginating-eloquent-4-2-models-outside-of-laravel
+* https://pusher.com/tutorials/consume-restful-api-react

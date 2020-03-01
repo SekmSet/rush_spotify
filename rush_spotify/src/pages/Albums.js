@@ -19,7 +19,7 @@ class Albums extends PureComponent {
 
     render() {
         return (
-            <Album Albums={this.state.albums} />
+            <Album albums={this.state.albums} />
         );
     }
 }

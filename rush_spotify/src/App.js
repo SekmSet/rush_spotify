@@ -13,6 +13,7 @@ import Genres from "./pages/Genres";
 import Artists from "./pages/Artists";
 import Tracks from "./pages/Tracks";
 import ArtistDetails from "./pages/ArtistDetails";
+import AlbumDetails from "./pages/AlbumDetails";
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
           </nav>
 
           <Switch>
+            <Route path="/albums/:id">
+              <AlbumDetails />
+            </Route>
             <Route path="/albums">
               <Albums />
             </Route>

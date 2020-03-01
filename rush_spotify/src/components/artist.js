@@ -12,7 +12,6 @@ const Artist = ({ artists }) => {
                         <h5 className="card-title">
                             <Link to={`/artists/${artist.id}`}>{artist.name}</Link>
                         </h5>
-
                     </div>
                 </div>
             ))}

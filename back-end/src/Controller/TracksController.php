@@ -20,7 +20,6 @@ class TracksController extends BaseController
 
         $this->checkErrorId($track);
 
-
         echo $track->toJson();
     }
 }

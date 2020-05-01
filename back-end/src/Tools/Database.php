@@ -15,8 +15,8 @@ class Database
             'driver' => 'mysql',
             'host' => 'localhost',
             'database' => 'spotify',
-            'username' => 'root',
-            'password' => 'root'
+            'username' => 'my_username',
+            'password' => 'my_pwd'
         ]);
         $eloquentManager->setAsGlobal();
         $eloquentManager->bootEloquent();

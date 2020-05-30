@@ -3,6 +3,7 @@ import {
     withRouter
 } from 'react-router-dom'
 
+
 import GenreDetail from '../components/genreDetail';
 
 class GenreDetails extends PureComponent {
@@ -14,7 +15,7 @@ class GenreDetails extends PureComponent {
     componentDidMount() {
         const id = this.props.match.params.id;
 
-        fetch('http://localhost:8081/genres?id='+ id)
+        fetch(`${process.env.REACT_APP_API_URL}/genres?id=${id}`)
             .then(res => res.json())
             .then((data) => {
                 this.setState({ genre: data });

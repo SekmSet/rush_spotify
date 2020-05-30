@@ -14,7 +14,7 @@ class AlbumDetails extends PureComponent {
     componentDidMount() {
         const id = this.props.match.params.id;
 
-        fetch('http://localhost:8081/albums?id='+ id)
+        fetch(`${process.env.REACT_APP_API_URL}/albums?id=${id}`)
             .then(res => res.json())
             .then((data) => {
                 this.setState({ album: data });

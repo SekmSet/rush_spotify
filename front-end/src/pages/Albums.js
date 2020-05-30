@@ -21,7 +21,7 @@ class Albums extends PureComponent {
 
     getApi(pageNumber) {
         console.log(`active page is ${pageNumber}`);
-        fetch(`http://localhost:8081/albums?page=${pageNumber}`)
+        fetch(`${process.env.REACT_APP_API_URL}/albums?page=${pageNumber}`)
             .then(res => res.json())
             .then((data) => {
                 this.setState({

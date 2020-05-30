@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+
 import Home from '../components/home';
 
 class Homes extends PureComponent{
@@ -8,7 +9,7 @@ class Homes extends PureComponent{
     };
 
     componentDidMount() {
-        fetch('http://localhost:8081/albums/random')
+        fetch(`${process.env.REACT_APP_API_URL}/albums/random`)
         .then(res => res.json())
         .then((data) => {
             this.setState({ randomAlbums: data })

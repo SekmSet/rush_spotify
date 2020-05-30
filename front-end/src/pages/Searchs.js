@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+
 import Search from '../components/search';
 import Pagination from "react-js-pagination";
 
@@ -56,7 +57,7 @@ class Searchs extends PureComponent{
 
     getApi(pageNumber) {
         console.log(`active page is ${pageNumber}`);
-        fetch(`http://localhost:8081/search?name=${this.state.name}&genre=${this.state.genre}&album=${this.state.album}&artist=${this.state.artist}&page=${pageNumber}`)
+        fetch(`${process.env.REACT_APP_API_URL}/search?name=${this.state.name}&genre=${this.state.genre}&album=${this.state.album}&artist=${this.state.artist}&page=${pageNumber}`)
             .then(res => res.json())
             .then((data) => {
                 this.setState({

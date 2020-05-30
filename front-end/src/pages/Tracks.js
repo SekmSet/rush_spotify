@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+
 import Track from '../components/track';
 import Pagination from 'react-js-pagination';
 
@@ -21,7 +22,7 @@ class Tracks extends PureComponent {
 
     getApi(pageNumber) {
         console.log(`active page is ${pageNumber}`);
-        fetch(`http://localhost:8081/tracks?page=${pageNumber}`)
+        fetch(`${process.env.REACT_APP_API_URL}/tracks?page=${pageNumber}`)
             .then(res => res.json())
             .then((data) => {
                 this.setState({

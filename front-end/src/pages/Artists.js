@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+
 import Artist from '../components/artist';
 import Pagination from "react-js-pagination";
 
@@ -21,7 +22,7 @@ class Artists extends PureComponent {
 
     getApi(pageNumber) {
         console.log(`active page is ${pageNumber}`);
-        fetch(`http://localhost:8081/artists?page=${pageNumber}`)
+        fetch(`${process.env.REACT_APP_API_URL}/artists?page=${pageNumber}`)
             .then(res => res.json())
             .then((data) => {
                 this.setState({
